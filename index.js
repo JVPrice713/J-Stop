@@ -25,10 +25,22 @@ let users = [{username: "Joe Schmoe", password: "secret123", id: 1},
 
 // let carts = [{userId: 1, products: []}];
 
-// let products = [{}];
+// let games = [{}];
 
 app.get('/users/:id', (req, res) => {
     const userId = Number(req.params.id);
     const requestedUser = users.find((user) => user.id === userId);
     res.send(requestedUser);
 });
+
+app.get('/games/:id', (req,res) => {
+    const gameId = Number(req.params.id);
+    const requestedGame = games.find((game) => game.id === gameId);
+    res.send(requestedGame);
+});
+
+app.put();
+
+app.post();
+
+app.delete();
